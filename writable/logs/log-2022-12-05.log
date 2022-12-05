@@ -4,3 +4,90 @@ in APPPATH\Config\Routes.php on line 40.
  2 SYSTEMPATH\CodeIgniter.php(406): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
  3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-05 04:15:44 --> ErrorException: pg_query(): Query failed: ERROR:  syntax error at or near "("
+LINE 7:  "luas" DECIMAL(20,15)(255) NULL,
+                              ^ in C:\xampp\htdocs\pgwl\petamangrove\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 140, Array)
+#1 C:\xampp\htdocs\pgwl\petamangrove\system\Database\Postgre\Connection.php(140): pg_query(Resource id #261, 'CREATE TABLE "t...')
+#2 C:\xampp\htdocs\pgwl\petamangrove\system\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('CREATE TABLE "t...')
+#3 C:\xampp\htdocs\pgwl\petamangrove\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE "t...')
+#4 C:\xampp\htdocs\pgwl\petamangrove\system\Database\Forge.php(509): CodeIgniter\Database\BaseConnection->query('CREATE TABLE "t...')
+#5 C:\xampp\htdocs\pgwl\petamangrove\app\Database\Migrations\2022-12-05-100653_TabelMangrove.php(55): CodeIgniter\Database\Forge->createTable('tbl_mangrove')
+#6 C:\xampp\htdocs\pgwl\petamangrove\system\Database\MigrationRunner.php(868): App\Database\Migrations\TabelMangrove->up()
+#7 C:\xampp\htdocs\pgwl\petamangrove\system\Database\MigrationRunner.php(187): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#8 C:\xampp\htdocs\pgwl\petamangrove\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#9 C:\xampp\htdocs\pgwl\petamangrove\system\CLI\Commands.php(63): CodeIgniter\Commands\Database\Migrate->run(Array)
+#10 C:\xampp\htdocs\pgwl\petamangrove\system\CLI\CommandRunner.php(65): CodeIgniter\CLI\Commands->run('migrate', Array)
+#11 C:\xampp\htdocs\pgwl\petamangrove\system\CLI\CommandRunner.php(51): CodeIgniter\CLI\CommandRunner->index(Array)
+#12 C:\xampp\htdocs\pgwl\petamangrove\system\CodeIgniter.php(897): CodeIgniter\CLI\CommandRunner->_remap('index', Array)
+#13 C:\xampp\htdocs\pgwl\petamangrove\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(CodeIgniter\CLI\CommandRunner))
+#14 C:\xampp\htdocs\pgwl\petamangrove\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#15 C:\xampp\htdocs\pgwl\petamangrove\system\CLI\Console.php(48): CodeIgniter\CodeIgniter->run()
+#16 C:\xampp\htdocs\pgwl\petamangrove\spark(98): CodeIgniter\CLI\Console->run()
+#17 {main}
+ERROR - 2022-12-05 04:24:22 --> ErrorException: pg_query(): Query failed: ERROR:  relation &quot;settings&quot; does not exist
+LINE 2: FROM &quot;settings&quot;
+             ^ in C:\xampp\htdocs\pgwl\petamangrove\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 140, Array)
+#1 C:\xampp\htdocs\pgwl\petamangrove\system\Database\Postgre\Connection.php(140): pg_query(Resource id #187, 'SELECT *\nFROM "...')
+#2 C:\xampp\htdocs\pgwl\petamangrove\system\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT *\nFROM "...')
+#3 C:\xampp\htdocs\pgwl\petamangrove\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM "...')
+#4 C:\xampp\htdocs\pgwl\petamangrove\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM "...', Array, false)
+#5 C:\xampp\htdocs\pgwl\petamangrove\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(163): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\xampp\htdocs\pgwl\petamangrove\vendor\codeigniter4\settings\src\Handlers\DatabaseHandler.php(41): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate(NULL)
+#7 C:\xampp\htdocs\pgwl\petamangrove\vendor\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has('Config\\Auth', 'sessionConfig', NULL)
+#8 C:\xampp\htdocs\pgwl\petamangrove\vendor\codeigniter4\settings\src\Helpers\setting_helper.php(21): CodeIgniter\Settings\Settings->get('Auth.sessionCon...')
+#9 C:\xampp\htdocs\pgwl\petamangrove\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(643): setting('Auth.sessionCon...')
+#10 C:\xampp\htdocs\pgwl\petamangrove\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(661): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+#11 C:\xampp\htdocs\pgwl\petamangrove\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(367): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+#12 C:\xampp\htdocs\pgwl\petamangrove\vendor\codeigniter4\shield\src\Authentication\Authenticators\Session.php(351): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+#13 C:\xampp\htdocs\pgwl\petamangrove\vendor\codeigniter4\shield\src\Auth.php(159): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+#14 C:\xampp\htdocs\pgwl\petamangrove\app\Views\v_data.php(48): CodeIgniter\Shield\Auth->__call('loggedIn', Array)
+#15 C:\xampp\htdocs\pgwl\petamangrove\system\View\View.php(213): include('C:\\xampp\\htdocs...')
+#16 C:\xampp\htdocs\pgwl\petamangrove\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#17 C:\xampp\htdocs\pgwl\petamangrove\system\Common.php(1142): CodeIgniter\View\View->render('v_data', Array, true)
+#18 C:\xampp\htdocs\pgwl\petamangrove\app\Controllers\Home.php(9): view('v_data')
+#19 C:\xampp\htdocs\pgwl\petamangrove\system\CodeIgniter.php(904): App\Controllers\Home->index()
+#20 C:\xampp\htdocs\pgwl\petamangrove\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#21 C:\xampp\htdocs\pgwl\petamangrove\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#22 C:\xampp\htdocs\pgwl\petamangrove\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#23 {main}
+CRITICAL - 2022-12-05 04:24:22 --> pg_query(): Query failed: ERROR:  relation &quot;settings&quot; does not exist
+LINE 2: FROM &quot;settings&quot;
+             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  relation &quot;settings&quot; does not exist
+LINE 2: FROM &quot;settings&quot;
+             ^', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140, [...])
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'SELECT *
+FROM "settings"
+WHERE "context" IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT *
+FROM "settings"
+WHERE "context" IS NULL')
+ 4 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM "settings"
+WHERE "context" IS NULL')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM "settings"
+WHERE "context" IS NULL', [], false)
+ 6 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(163): CodeIgniter\Database\BaseBuilder->get()
+ 7 VENDORPATH\codeigniter4\settings\src\Handlers\DatabaseHandler.php(41): CodeIgniter\Settings\Handlers\DatabaseHandler->hydrate(null)
+ 8 VENDORPATH\codeigniter4\settings\src\Settings.php(59): CodeIgniter\Settings\Handlers\DatabaseHandler->has('Config\\Auth', 'sessionConfig', null)
+ 9 VENDORPATH\codeigniter4\settings\src\Helpers\setting_helper.php(21): CodeIgniter\Settings\Settings->get('Auth.sessionConfig')
+10 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(643): setting('Auth.sessionConfig')
+11 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(661): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionUserInfo()
+12 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(367): CodeIgniter\Shield\Authentication\Authenticators\Session->getSessionKey('id')
+13 VENDORPATH\codeigniter4\shield\src\Authentication\Authenticators\Session.php(351): CodeIgniter\Shield\Authentication\Authenticators\Session->checkUserState()
+14 VENDORPATH\codeigniter4\shield\src\Auth.php(159): CodeIgniter\Shield\Authentication\Authenticators\Session->loggedIn()
+15 APPPATH\Views\v_data.php(48): CodeIgniter\Shield\Auth->__call('loggedIn', [])
+16 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_data.php')
+17 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+18 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('v_data', [], true)
+19 APPPATH\Controllers\Home.php(9): view('v_data')
+20 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+21 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+22 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+23 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
