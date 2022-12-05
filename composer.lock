@@ -74,12 +74,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/codeigniter4/shield.git",
-                "reference": "03db0730537d9d12e7144ecb486df7d23e40ab1b"
+                "reference": "cf21770058dbcc7299bf3e1eb5c057069c91b5bb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/codeigniter4/shield/zipball/03db0730537d9d12e7144ecb486df7d23e40ab1b",
-                "reference": "03db0730537d9d12e7144ecb486df7d23e40ab1b",
+                "url": "https://api.github.com/repos/codeigniter4/shield/zipball/cf21770058dbcc7299bf3e1eb5c057069c91b5bb",
+                "reference": "cf21770058dbcc7299bf3e1eb5c057069c91b5bb",
                 "shasum": ""
             },
             "require": {
@@ -91,7 +91,7 @@
             },
             "require-dev": {
                 "codeigniter4/devkit": "^1.0",
-                "codeigniter4/framework": "^4.2.3",
+                "codeigniter4/framework": "^4.2.7",
                 "mockery/mockery": "^1.0"
             },
             "default-branch": true,
@@ -134,7 +134,7 @@
                 "slack": "https://codeigniterchat.slack.com",
                 "source": "https://github.com/codeigniter4/shield"
             },
-            "time": "2022-10-21T08:00:13+00:00"
+            "time": "2022-12-04T21:05:17+00:00"
         },
         {
             "name": "kint-php/kint",
