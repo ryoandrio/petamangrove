@@ -1,0 +1,219 @@
+CRITICAL - 2022-11-28 08:27:57 --> Undefined variable: idpolygon
+in APPPATH\Views\leafletdraw\v_edit_polyline.php on line 187.
+ 1 APPPATH\Views\leafletdraw\v_edit_polyline.php(187): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: idpolygon', 'APPPATH\\Views\\leafletdraw\\v_edit_polyline.php', 187, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\leafletdraw\\v_edit_polyline.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('leafletdraw/v_edit_polyline', [], true)
+ 5 APPPATH\Controllers\Leafletdraw.php(127): view('leafletdraw/v_edit_polyline', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Leafletdraw->edit_polyline('1')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leafletdraw))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-28 08:32:12 --> Undefined variable: idpolygon
+in APPPATH\Views\leafletdraw\v_edit_polyline.php on line 235.
+ 1 APPPATH\Views\leafletdraw\v_edit_polyline.php(235): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: idpolygon', 'APPPATH\\Views\\leafletdraw\\v_edit_polyline.php', 235, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\leafletdraw\\v_edit_polyline.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('leafletdraw/v_edit_polyline', [], true)
+ 5 APPPATH\Controllers\Leafletdraw.php(127): view('leafletdraw/v_edit_polyline', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Leafletdraw->edit_polyline('1')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leafletdraw))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-28 08:36:20 --> Too few arguments to function App\Controllers\Leafletdraw::edit_polyline(), 0 passed in C:\xampp\htdocs\pgwl\petalokasiobjek\system\CodeIgniter.php on line 904 and exactly 1 expected
+in APPPATH\Controllers\Leafletdraw.php on line 121.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Leafletdraw->edit_polyline()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leafletdraw))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-28 08:37:51 --> Undefined index: luas_m2
+in APPPATH\Controllers\Api.php on line 244.
+ 1 APPPATH\Controllers\Api.php(244): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: luas_m2', 'APPPATH\\Controllers\\Api.php', 244, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Api->one_polygon('6')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-28 08:37:51 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse json string, error: "Type is not supported". in C:\xampp\htdocs\pgwl\petalokasiobjek\system\Format\JSONFormatter.php:41
+Stack trace:
+#0 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Format\JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 C:\xampp\htdocs\pgwl\petalokasiobjek\system\API\ResponseTrait.php(348): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\pgwl\petalokasiobjek\system\API\ResponseTrait.php(99): CodeIgniter\Debug\Exceptions->format(Array)
+#3 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Debug\Exceptions.php(132): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#5 {main}
+  thrown
+in SYSTEMPATH\Format\JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-11-28 08:37:58 --> Undefined index: luas_m2
+in APPPATH\Controllers\Api.php on line 244.
+ 1 APPPATH\Controllers\Api.php(244): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: luas_m2', 'APPPATH\\Controllers\\Api.php', 244, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Api->one_polygon('6')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-28 08:37:58 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse json string, error: "Type is not supported". in C:\xampp\htdocs\pgwl\petalokasiobjek\system\Format\JSONFormatter.php:41
+Stack trace:
+#0 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Format\JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 C:\xampp\htdocs\pgwl\petalokasiobjek\system\API\ResponseTrait.php(348): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\pgwl\petalokasiobjek\system\API\ResponseTrait.php(99): CodeIgniter\Debug\Exceptions->format(Array)
+#3 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Debug\Exceptions.php(132): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#5 {main}
+  thrown
+in SYSTEMPATH\Format\JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-11-28 08:38:16 --> Undefined index: luas_m2
+in APPPATH\Controllers\Api.php on line 244.
+ 1 APPPATH\Controllers\Api.php(244): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: luas_m2', 'APPPATH\\Controllers\\Api.php', 244, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Api->one_polygon('6')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-11-28 08:40:46 --> ErrorException: pg_query(): Query failed: ERROR:  null value in column &quot;geom&quot; violates not-null constraint
+DETAIL:  Failing row contains (5, null, null, , null, 2022-11-28 08:40:46, 2022-11-28 08:40:46, null). in C:\xampp\htdocs\pgwl\petalokasiobjek\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 140, Array)
+#1 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Database\Postgre\Connection.php(140): pg_query(Resource id #184, 'INSERT INTO "tb...')
+#2 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "tb...')
+#3 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "tb...')
+#4 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "tb...', Array, false)
+#5 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\xampp\htdocs\pgwl\petalokasiobjek\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#7 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, false)
+#8 C:\xampp\htdocs\pgwl\petalokasiobjek\system\BaseModel.php(658): CodeIgniter\Model->insert(Array, false)
+#9 C:\xampp\htdocs\pgwl\petalokasiobjek\app\Controllers\Leafletdraw.php(148): CodeIgniter\BaseModel->save(Array)
+#10 C:\xampp\htdocs\pgwl\petalokasiobjek\system\CodeIgniter.php(904): App\Controllers\Leafletdraw->simpan_edit_data_polyline()
+#11 C:\xampp\htdocs\pgwl\petalokasiobjek\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leafletdraw))
+#12 C:\xampp\htdocs\pgwl\petalokasiobjek\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\pgwl\petalokasiobjek\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+CRITICAL - 2022-11-28 08:40:46 --> pg_query(): Query failed: ERROR:  null value in column &quot;geom&quot; violates not-null constraint
+DETAIL:  Failing row contains (5, null, null, , null, 2022-11-28 08:40:46, 2022-11-28 08:40:46, null).
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  null value in column &quot;geom&quot; violates not-null constraint
+DETAIL:  Failing row contains (5, null, null, , null, 2022-11-28 08:40:46, 2022-11-28 08:40:46, null).', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140, [...])
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'INSERT INTO "tbl_data_polyline" ("deskripsi", "created_at", "updated_at") VALUES (\'\', \'2022-11-28 08:40:46\', \'2022-11-28 08:40:46\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "tbl_data_polyline" ("deskripsi", "created_at", "updated_at") VALUES (\'\', \'2022-11-28 08:40:46\', \'2022-11-28 08:40:46\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "tbl_data_polyline" ("deskripsi", "created_at", "updated_at") VALUES (\'\', \'2022-11-28 08:40:46\', \'2022-11-28 08:40:46\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "tbl_data_polyline" ("deskripsi", "created_at", "updated_at") VALUES (:deskripsi:, :created_at:, :updated_at:)', [...], false)
+ 6 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], false)
+ 9 SYSTEMPATH\BaseModel.php(658): CodeIgniter\Model->insert([...], false)
+10 APPPATH\Controllers\Leafletdraw.php(148): CodeIgniter\BaseModel->save([...])
+11 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Leafletdraw->simpan_edit_data_polyline()
+12 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leafletdraw))
+13 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-11-28 08:41:34 --> ErrorException: pg_query(): Query failed: ERROR:  null value in column &quot;geom&quot; violates not-null constraint
+DETAIL:  Failing row contains (6, null, null, line 1, null, 2022-11-28 08:41:34, 2022-11-28 08:41:34, null). in C:\xampp\htdocs\pgwl\petalokasiobjek\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 140, Array)
+#1 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Database\Postgre\Connection.php(140): pg_query(Resource id #184, 'INSERT INTO "tb...')
+#2 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "tb...')
+#3 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "tb...')
+#4 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "tb...', Array, false)
+#5 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\xampp\htdocs\pgwl\petalokasiobjek\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#7 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, false)
+#8 C:\xampp\htdocs\pgwl\petalokasiobjek\system\BaseModel.php(658): CodeIgniter\Model->insert(Array, false)
+#9 C:\xampp\htdocs\pgwl\petalokasiobjek\app\Controllers\Leafletdraw.php(148): CodeIgniter\BaseModel->save(Array)
+#10 C:\xampp\htdocs\pgwl\petalokasiobjek\system\CodeIgniter.php(904): App\Controllers\Leafletdraw->simpan_edit_data_polyline()
+#11 C:\xampp\htdocs\pgwl\petalokasiobjek\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leafletdraw))
+#12 C:\xampp\htdocs\pgwl\petalokasiobjek\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\pgwl\petalokasiobjek\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+CRITICAL - 2022-11-28 08:41:34 --> pg_query(): Query failed: ERROR:  null value in column &quot;geom&quot; violates not-null constraint
+DETAIL:  Failing row contains (6, null, null, line 1, null, 2022-11-28 08:41:34, 2022-11-28 08:41:34, null).
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  null value in column &quot;geom&quot; violates not-null constraint
+DETAIL:  Failing row contains (6, null, null, line 1, null, 2022-11-28 08:41:34, 2022-11-28 08:41:34, null).', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140, [...])
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'INSERT INTO "tbl_data_polyline" ("deskripsi", "created_at", "updated_at") VALUES (\'line 1\', \'2022-11-28 08:41:34\', \'2022-11-28 08:41:34\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "tbl_data_polyline" ("deskripsi", "created_at", "updated_at") VALUES (\'line 1\', \'2022-11-28 08:41:34\', \'2022-11-28 08:41:34\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "tbl_data_polyline" ("deskripsi", "created_at", "updated_at") VALUES (\'line 1\', \'2022-11-28 08:41:34\', \'2022-11-28 08:41:34\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "tbl_data_polyline" ("deskripsi", "created_at", "updated_at") VALUES (:deskripsi:, :created_at:, :updated_at:)', [...], false)
+ 6 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], false)
+ 9 SYSTEMPATH\BaseModel.php(658): CodeIgniter\Model->insert([...], false)
+10 APPPATH\Controllers\Leafletdraw.php(148): CodeIgniter\BaseModel->save([...])
+11 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Leafletdraw->simpan_edit_data_polyline()
+12 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leafletdraw))
+13 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-11-28 08:50:09 --> ErrorException: pg_query(): Query failed: ERROR:  null value in column &quot;geom&quot; violates not-null constraint
+DETAIL:  Failing row contains (8, null, null, Jarak Depok-Bogor, null, 2022-11-28 08:50:09, 2022-11-28 08:50:09, null). in C:\xampp\htdocs\pgwl\petalokasiobjek\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 140, Array)
+#1 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Database\Postgre\Connection.php(140): pg_query(Resource id #184, 'INSERT INTO "tb...')
+#2 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "tb...')
+#3 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "tb...')
+#4 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "tb...', Array, false)
+#5 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\xampp\htdocs\pgwl\petalokasiobjek\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#7 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, false)
+#8 C:\xampp\htdocs\pgwl\petalokasiobjek\system\BaseModel.php(658): CodeIgniter\Model->insert(Array, false)
+#9 C:\xampp\htdocs\pgwl\petalokasiobjek\app\Controllers\Leafletdraw.php(148): CodeIgniter\BaseModel->save(Array)
+#10 C:\xampp\htdocs\pgwl\petalokasiobjek\system\CodeIgniter.php(904): App\Controllers\Leafletdraw->simpan_edit_data_polyline()
+#11 C:\xampp\htdocs\pgwl\petalokasiobjek\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leafletdraw))
+#12 C:\xampp\htdocs\pgwl\petalokasiobjek\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\pgwl\petalokasiobjek\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+CRITICAL - 2022-11-28 08:50:09 --> pg_query(): Query failed: ERROR:  null value in column &quot;geom&quot; violates not-null constraint
+DETAIL:  Failing row contains (8, null, null, Jarak Depok-Bogor, null, 2022-11-28 08:50:09, 2022-11-28 08:50:09, null).
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  null value in column &quot;geom&quot; violates not-null constraint
+DETAIL:  Failing row contains (8, null, null, Jarak Depok-Bogor, null, 2022-11-28 08:50:09, 2022-11-28 08:50:09, null).', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140, [...])
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'INSERT INTO "tbl_data_polyline" ("deskripsi", "created_at", "updated_at") VALUES (\'Jarak Depok-Bogor\', \'2022-11-28 08:50:09\', \'2022-11-28 08:50:09\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "tbl_data_polyline" ("deskripsi", "created_at", "updated_at") VALUES (\'Jarak Depok-Bogor\', \'2022-11-28 08:50:09\', \'2022-11-28 08:50:09\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "tbl_data_polyline" ("deskripsi", "created_at", "updated_at") VALUES (\'Jarak Depok-Bogor\', \'2022-11-28 08:50:09\', \'2022-11-28 08:50:09\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "tbl_data_polyline" ("deskripsi", "created_at", "updated_at") VALUES (:deskripsi:, :created_at:, :updated_at:)', [...], false)
+ 6 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], false)
+ 9 SYSTEMPATH\BaseModel.php(658): CodeIgniter\Model->insert([...], false)
+10 APPPATH\Controllers\Leafletdraw.php(148): CodeIgniter\BaseModel->save([...])
+11 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Leafletdraw->simpan_edit_data_polyline()
+12 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leafletdraw))
+13 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-11-28 09:04:50 --> ErrorException: pg_query(): Query failed: ERROR:  null value in column &quot;nama&quot; violates not-null constraint
+DETAIL:  Failing row contains (4, 0103000000010000000F000000984C158C4AD45A40EB538EC9E2EE19C0DF347D..., null, Waduk Jatiluhur, null, 2022-11-16 19:42:27, 2022-11-28 09:04:50, null). in C:\xampp\htdocs\pgwl\petalokasiobjek\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 140, Array)
+#1 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Database\Postgre\Connection.php(140): pg_query(Resource id #184, 'UPDATE "tbl_dat...')
+#2 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "tbl_dat...')
+#3 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "tbl_dat...')
+#4 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE "tbl_dat...', Array, false)
+#5 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#6 C:\xampp\htdocs\pgwl\petalokasiobjek\system\BaseModel.php(865): CodeIgniter\Model->doUpdate(Array, Array)
+#7 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Model.php(693): CodeIgniter\BaseModel->update(Array, Array)
+#8 C:\xampp\htdocs\pgwl\petalokasiobjek\system\BaseModel.php(656): CodeIgniter\Model->update('4', Array)
+#9 C:\xampp\htdocs\pgwl\petalokasiobjek\app\Controllers\Leafletdraw.php(117): CodeIgniter\BaseModel->save(Array)
+#10 C:\xampp\htdocs\pgwl\petalokasiobjek\system\CodeIgniter.php(904): App\Controllers\Leafletdraw->simpan_edit_data_polygon()
+#11 C:\xampp\htdocs\pgwl\petalokasiobjek\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leafletdraw))
+#12 C:\xampp\htdocs\pgwl\petalokasiobjek\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\pgwl\petalokasiobjek\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+CRITICAL - 2022-11-28 09:04:50 --> pg_query(): Query failed: ERROR:  null value in column &quot;nama&quot; violates not-null constraint
+DETAIL:  Failing row contains (4, 0103000000010000000F000000984C158C4AD45A40EB538EC9E2EE19C0DF347D..., null, Waduk Jatiluhur, null, 2022-11-16 19:42:27, 2022-11-28 09:04:50, null).
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  null value in column &quot;nama&quot; violates not-null constraint
+DETAIL:  Failing row contains (4, 0103000000010000000F000000984C158C4AD45A40EB538EC9E2EE19C0DF347D..., null, Waduk Jatiluhur, null, 2022-11-16 19:42:27, 2022-11-28 09:04:50, null).', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140, [...])
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'UPDATE "tbl_data_polygon" SET "nama" = NULL, "deskripsi" = \'Waduk Jatiluhur\', "updated_at" = \'2022-11-28 09:04:50\'
+WHERE "tbl_data_polygon"."id" IN (\'4\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('UPDATE "tbl_data_polygon" SET "nama" = NULL, "deskripsi" = \'Waduk Jatiluhur\', "updated_at" = \'2022-11-28 09:04:50\'
+WHERE "tbl_data_polygon"."id" IN (\'4\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE "tbl_data_polygon" SET "nama" = NULL, "deskripsi" = \'Waduk Jatiluhur\', "updated_at" = \'2022-11-28 09:04:50\'
+WHERE "tbl_data_polygon"."id" IN (\'4\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE "tbl_data_polygon" SET "nama" = :nama:, "deskripsi" = :deskripsi:, "updated_at" = :updated_at:
+WHERE "tbl_data_polygon"."id" IN :tbl_data_polygon.id:', [...], false)
+ 6 SYSTEMPATH\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+ 7 SYSTEMPATH\BaseModel.php(865): CodeIgniter\Model->doUpdate([...], [...])
+ 8 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], [...])
+ 9 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->update('4', [...])
+10 APPPATH\Controllers\Leafletdraw.php(117): CodeIgniter\BaseModel->save([...])
+11 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Leafletdraw->simpan_edit_data_polygon()
+12 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leafletdraw))
+13 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

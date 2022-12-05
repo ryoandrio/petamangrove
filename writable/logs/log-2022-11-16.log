@@ -1,0 +1,97 @@
+ERROR - 2022-11-16 19:54:59 --> ErrorException: pg_query(): Query failed: ERROR:  syntax error at or near &quot;nama&quot;
+LINE 1: SELECT id, geom, ST_Area(geom, true) AS luas_m2 nama, deskri...
+                                                        ^ in C:\xampp\htdocs\pgwl\petalokasiobjek\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 140, Array)
+#1 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Database\Postgre\Connection.php(140): pg_query(Resource id #171, 'SELECT id, geom...')
+#2 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT id, geom...')
+#3 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT id, geom...')
+#4 C:\xampp\htdocs\pgwl\petalokasiobjek\app\Controllers\Api.php(127): CodeIgniter\Database\BaseConnection->query('SELECT id, geom...')
+#5 C:\xampp\htdocs\pgwl\petalokasiobjek\system\CodeIgniter.php(904): App\Controllers\Api->polygon()
+#6 C:\xampp\htdocs\pgwl\petalokasiobjek\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+#7 C:\xampp\htdocs\pgwl\petalokasiobjek\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\pgwl\petalokasiobjek\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-11-16 19:54:59 --> pg_query(): Query failed: ERROR:  syntax error at or near &quot;nama&quot;
+LINE 1: SELECT id, geom, ST_Area(geom, true) AS luas_m2 nama, deskri...
+                                                        ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  syntax error at or near &quot;nama&quot;
+LINE 1: SELECT id, geom, ST_Area(geom, true) AS luas_m2 nama, deskri...
+                                                        ^', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140, [...])
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'SELECT id, geom, ST_Area(geom, true) AS luas_m2 nama, deskripsi, foto, created_at, updated_at FROM tbl_data_polygon')
+ 3 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT id, geom, ST_Area(geom, true) AS luas_m2 nama, deskripsi, foto, created_at, updated_at FROM tbl_data_polygon')
+ 4 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT id, geom, ST_Area(geom, true) AS luas_m2 nama, deskripsi, foto, created_at, updated_at FROM tbl_data_polygon')
+ 5 APPPATH\Controllers\Api.php(127): CodeIgniter\Database\BaseConnection->query('SELECT id, geom, ST_Area(geom, true) AS luas_m2 nama, deskripsi, foto, created_at, updated_at FROM tbl_data_polygon')
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Api->polygon()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-16 20:04:03 --> Trying to access array offset on value of type resource
+in APPPATH\Controllers\Api.php on line 138.
+ 1 APPPATH\Controllers\Api.php(138): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type resource', 'APPPATH\\Controllers\\Api.php', 138, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Api->polygon()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-16 20:05:36 --> Trying to access array offset on value of type resource
+in APPPATH\Controllers\Api.php on line 137.
+ 1 APPPATH\Controllers\Api.php(137): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type resource', 'APPPATH\\Controllers\\Api.php', 137, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Api->polygon()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-16 20:06:22 --> syntax error, unexpected ';', expecting ']'
+in APPPATH\Controllers\Api.php on line 135.
+ 1 SYSTEMPATH\Router\Router.php(499): CodeIgniter\Router\AutoRouter->getRoute('api/polygon')
+ 2 SYSTEMPATH\Router\Router.php(205): CodeIgniter\Router\Router->autoRoute('api/polygon')
+ 3 SYSTEMPATH\CodeIgniter.php(779): CodeIgniter\Router\Router->handle('api/polygon')
+ 4 SYSTEMPATH\CodeIgniter.php(406): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-16 20:06:34 --> Trying to access array offset on value of type resource
+in APPPATH\Controllers\Api.php on line 135.
+ 1 APPPATH\Controllers\Api.php(135): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type resource', 'APPPATH\\Controllers\\Api.php', 135, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Api->polygon()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-16 20:08:24 --> Trying to access array offset on value of type resource
+in APPPATH\Controllers\Api.php on line 138.
+ 1 APPPATH\Controllers\Api.php(138): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type resource', 'APPPATH\\Controllers\\Api.php', 138, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Api->polygon()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-16 21:51:31 --> Deletes are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 382.
+ 1 SYSTEMPATH\BaseModel.php(963): CodeIgniter\Model->doDelete(null, false)
+ 2 APPPATH\Controllers\Leafletdraw.php(70): CodeIgniter\BaseModel->delete(null)
+ 3 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Leafletdraw->hapusdatapolygon()
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leafletdraw))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-16 21:51:59 --> Deletes are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 382.
+ 1 SYSTEMPATH\BaseModel.php(963): CodeIgniter\Model->doDelete(null, false)
+ 2 APPPATH\Controllers\Leafletdraw.php(70): CodeIgniter\BaseModel->delete(null)
+ 3 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Leafletdraw->hapusdatapolygon()
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leafletdraw))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-16 21:52:16 --> Deletes are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 382.
+ 1 SYSTEMPATH\BaseModel.php(963): CodeIgniter\Model->doDelete(null, false)
+ 2 APPPATH\Controllers\Leafletdraw.php(70): CodeIgniter\BaseModel->delete(null)
+ 3 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Leafletdraw->hapusdatapolygon()
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leafletdraw))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-16 21:53:52 --> Deletes are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 382.
+ 1 SYSTEMPATH\BaseModel.php(963): CodeIgniter\Model->doDelete(null, false)
+ 2 APPPATH\Controllers\Leafletdraw.php(70): CodeIgniter\BaseModel->delete(null)
+ 3 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Leafletdraw->hapusdatapolygon()
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leafletdraw))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

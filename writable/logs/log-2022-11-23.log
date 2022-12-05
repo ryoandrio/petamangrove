@@ -1,0 +1,52 @@
+CRITICAL - 2022-11-23 19:42:36 --> syntax error, unexpected '}', expecting ';'
+in APPPATH\Controllers\Leafletdraw.php on line 93.
+ 1 SYSTEMPATH\Router\Router.php(499): CodeIgniter\Router\AutoRouter->getRoute('leafletdraw/edit')
+ 2 SYSTEMPATH\Router\Router.php(205): CodeIgniter\Router\Router->autoRoute('leafletdraw/edit')
+ 3 SYSTEMPATH\CodeIgniter.php(779): CodeIgniter\Router\Router->handle('leafletdraw/edit')
+ 4 SYSTEMPATH\CodeIgniter.php(406): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-23 20:09:20 --> 4 is not a valid database connection group.
+in SYSTEMPATH\Database\Config.php on line 65.
+ 1 SYSTEMPATH\Common.php(346): CodeIgniter\Database\Config::connect('4', true)
+ 2 APPPATH\Controllers\Api.php(228): db_connect('4')
+ 3 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Api->one_polygon('4')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-11-23 21:36:26 --> ErrorException: pg_query(): Query failed: ERROR:  null value in column &quot;geom&quot; violates not-null constraint
+DETAIL:  Failing row contains (7, null, null, Taman Nasional Gunung Gede Pangrango, null, 2022-11-23 21:36:26, 2022-11-23 21:36:26, null). in C:\xampp\htdocs\pgwl\petalokasiobjek\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 140, Array)
+#1 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Database\Postgre\Connection.php(140): pg_query(Resource id #184, 'INSERT INTO "tb...')
+#2 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "tb...')
+#3 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "tb...')
+#4 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "tb...', Array, false)
+#5 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\xampp\htdocs\pgwl\petalokasiobjek\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#7 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, false)
+#8 C:\xampp\htdocs\pgwl\petalokasiobjek\system\BaseModel.php(658): CodeIgniter\Model->insert(Array, false)
+#9 C:\xampp\htdocs\pgwl\petalokasiobjek\app\Controllers\Leafletdraw.php(117): CodeIgniter\BaseModel->save(Array)
+#10 C:\xampp\htdocs\pgwl\petalokasiobjek\system\CodeIgniter.php(904): App\Controllers\Leafletdraw->simpan_edit_data_polygon()
+#11 C:\xampp\htdocs\pgwl\petalokasiobjek\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leafletdraw))
+#12 C:\xampp\htdocs\pgwl\petalokasiobjek\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\pgwl\petalokasiobjek\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+CRITICAL - 2022-11-23 21:36:26 --> pg_query(): Query failed: ERROR:  null value in column &quot;geom&quot; violates not-null constraint
+DETAIL:  Failing row contains (7, null, null, Taman Nasional Gunung Gede Pangrango, null, 2022-11-23 21:36:26, 2022-11-23 21:36:26, null).
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  null value in column &quot;geom&quot; violates not-null constraint
+DETAIL:  Failing row contains (7, null, null, Taman Nasional Gunung Gede Pangrango, null, 2022-11-23 21:36:26, 2022-11-23 21:36:26, null).', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140, [...])
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'INSERT INTO "tbl_data_polygon" ("deskripsi", "created_at", "updated_at") VALUES (\'Taman Nasional Gunung Gede Pangrango\', \'2022-11-23 21:36:26\', \'2022-11-23 21:36:26\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "tbl_data_polygon" ("deskripsi", "created_at", "updated_at") VALUES (\'Taman Nasional Gunung Gede Pangrango\', \'2022-11-23 21:36:26\', \'2022-11-23 21:36:26\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "tbl_data_polygon" ("deskripsi", "created_at", "updated_at") VALUES (\'Taman Nasional Gunung Gede Pangrango\', \'2022-11-23 21:36:26\', \'2022-11-23 21:36:26\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "tbl_data_polygon" ("deskripsi", "created_at", "updated_at") VALUES (:deskripsi:, :created_at:, :updated_at:)', [...], false)
+ 6 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], false)
+ 9 SYSTEMPATH\BaseModel.php(658): CodeIgniter\Model->insert([...], false)
+10 APPPATH\Controllers\Leafletdraw.php(117): CodeIgniter\BaseModel->save([...])
+11 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Leafletdraw->simpan_edit_data_polygon()
+12 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leafletdraw))
+13 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

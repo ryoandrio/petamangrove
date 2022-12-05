@@ -1,0 +1,181 @@
+ERROR - 2022-09-28 20:59:58 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it.
+ in C:\xampp\htdocs\pgwl\petalokasiobjek\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Database\BaseConnection.php(1385): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#4 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Database\BaseConnection.php(1419): CodeIgniter\Database\BaseConnection->listTables()
+#5 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Database\MigrationRunner.php(759): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#6 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Database\MigrationRunner.php(167): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\pgwl\petalokasiobjek\system\CLI\Commands.php(63): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\pgwl\petalokasiobjek\system\CLI\CommandRunner.php(65): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\pgwl\petalokasiobjek\system\CLI\CommandRunner.php(51): CodeIgniter\CLI\CommandRunner->index(Array)
+#11 C:\xampp\htdocs\pgwl\petalokasiobjek\system\CodeIgniter.php(897): CodeIgniter\CLI\CommandRunner->_remap('index', Array)
+#12 C:\xampp\htdocs\pgwl\petalokasiobjek\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(CodeIgniter\CLI\CommandRunner))
+#13 C:\xampp\htdocs\pgwl\petalokasiobjek\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 C:\xampp\htdocs\pgwl\petalokasiobjek\system\CLI\Console.php(48): CodeIgniter\CodeIgniter->run()
+#15 C:\xampp\htdocs\pgwl\petalokasiobjek\spark(98): CodeIgniter\CLI\Console->run()
+#16 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it.
+ in C:\xampp\htdocs\pgwl\petalokasiobjek\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Database\BaseConnection.php(1385): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#3 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Database\BaseConnection.php(1419): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Database\MigrationRunner.php(759): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Database\MigrationRunner.php(167): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\xampp\htdocs\pgwl\petalokasiobjek\system\CLI\Commands.php(63): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\xampp\htdocs\pgwl\petalokasiobjek\system\CLI\CommandRunner.php(65): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\xampp\htdocs\pgwl\petalokasiobjek\system\CLI\CommandRunner.php(51): CodeIgniter\CLI\CommandRunner->index(Array)
+#10 C:\xampp\htdocs\pgwl\petalokasiobjek\system\CodeIgniter.php(897): CodeIgniter\CLI\CommandRunner->_remap('index', Array)
+#11 C:\xampp\htdocs\pgwl\petalokasiobjek\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(CodeIgniter\CLI\CommandRunner))
+#12 C:\xampp\htdocs\pgwl\petalokasiobjek\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\pgwl\petalokasiobjek\system\CLI\Console.php(48): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\pgwl\petalokasiobjek\spark(98): CodeIgniter\CLI\Console->run()
+#15 {main}
+CRITICAL - 2022-09-28 21:46:19 --> Array to string conversion
+in APPPATH\Controllers\Objek.php on line 17.
+ 1 APPPATH\Controllers\Objek.php(17): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string conversion', 'APPPATH\\Controllers\\Objek.php', 17, [])
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Objek->simpantambahdata()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Objek))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-28 21:48:09 --> Method name must be a string
+in APPPATH\Controllers\Objek.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Objek->simpantambahdata()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Objek))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-28 21:48:39 --> Method name must be a string
+in APPPATH\Controllers\Objek.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Objek->simpantambahdata()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Objek))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-28 21:53:04 --> Undefined index: input_deskr]psi
+in APPPATH\Controllers\Objek.php on line 18.
+ 1 APPPATH\Controllers\Objek.php(18): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: input_deskr]psi', 'APPPATH\\Controllers\\Objek.php', 18, [])
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Objek->simpantambahdata()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Objek))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-28 21:57:34 --> Undefined property: App\Controllers\Objek::$TblObjekModel
+in APPPATH\Controllers\Objek.php on line 23.
+ 1 APPPATH\Controllers\Objek.php(23): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\Objek::$TblObjekModel', 'APPPATH\\Controllers\\Objek.php', 23, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Objek->simpantambahdata()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Objek))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-09-28 22:01:28 --> ErrorException: pg_query(): Query failed: ERROR:  null value in column &quot;foto&quot; violates not-null constraint
+DETAIL:  Failing row contains (1, test, 123, 107.043090820443480, -6.733502313025847, null, 2022-09-28 22:01:28, 2022-09-28 22:01:28, null). in C:\xampp\htdocs\pgwl\petalokasiobjek\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 140, Array)
+#1 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Database\Postgre\Connection.php(140): pg_query(Resource id #121, 'INSERT INTO "tb...')
+#2 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "tb...')
+#3 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "tb...')
+#4 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "tb...', Array, false)
+#5 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\xampp\htdocs\pgwl\petalokasiobjek\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#7 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, false)
+#8 C:\xampp\htdocs\pgwl\petalokasiobjek\system\BaseModel.php(658): CodeIgniter\Model->insert(Array, false)
+#9 C:\xampp\htdocs\pgwl\petalokasiobjek\app\Controllers\Objek.php(32): CodeIgniter\BaseModel->save(Array)
+#10 C:\xampp\htdocs\pgwl\petalokasiobjek\system\CodeIgniter.php(904): App\Controllers\Objek->simpantambahdata()
+#11 C:\xampp\htdocs\pgwl\petalokasiobjek\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Objek))
+#12 C:\xampp\htdocs\pgwl\petalokasiobjek\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\pgwl\petalokasiobjek\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+CRITICAL - 2022-09-28 22:01:28 --> pg_query(): Query failed: ERROR:  null value in column &quot;foto&quot; violates not-null constraint
+DETAIL:  Failing row contains (1, test, 123, 107.043090820443480, -6.733502313025847, null, 2022-09-28 22:01:28, 2022-09-28 22:01:28, null).
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  null value in column &quot;foto&quot; violates not-null constraint
+DETAIL:  Failing row contains (1, test, 123, 107.043090820443480, -6.733502313025847, null, 2022-09-28 22:01:28, 2022-09-28 22:01:28, null).', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140, [...])
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'INSERT INTO "tbl_objek" ("nama", "deskripsi", "longitude", "latitude", "created_at", "updated_at") VALUES (\'test\', \'123\', \'107.04309082044348\', \'-6.733502313025847\', \'2022-09-28 22:01:28\', \'2022-09-28 22:01:28\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "tbl_objek" ("nama", "deskripsi", "longitude", "latitude", "created_at", "updated_at") VALUES (\'test\', \'123\', \'107.04309082044348\', \'-6.733502313025847\', \'2022-09-28 22:01:28\', \'2022-09-28 22:01:28\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "tbl_objek" ("nama", "deskripsi", "longitude", "latitude", "created_at", "updated_at") VALUES (\'test\', \'123\', \'107.04309082044348\', \'-6.733502313025847\', \'2022-09-28 22:01:28\', \'2022-09-28 22:01:28\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "tbl_objek" ("nama", "deskripsi", "longitude", "latitude", "created_at", "updated_at") VALUES (:nama:, :deskripsi:, :longitude:, :latitude:, :created_at:, :updated_at:)', [...], false)
+ 6 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], false)
+ 9 SYSTEMPATH\BaseModel.php(658): CodeIgniter\Model->insert([...], false)
+10 APPPATH\Controllers\Objek.php(32): CodeIgniter\BaseModel->save([...])
+11 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Objek->simpantambahdata()
+12 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Objek))
+13 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-09-28 22:04:56 --> ErrorException: pg_query(): Query failed: ERROR:  null value in column &quot;foto&quot; violates not-null constraint
+DETAIL:  Failing row contains (2, test, 123, 106.945552825927750, -6.790762250562566, null, 2022-09-28 22:04:56, 2022-09-28 22:04:56, null). in C:\xampp\htdocs\pgwl\petalokasiobjek\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 140, Array)
+#1 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Database\Postgre\Connection.php(140): pg_query(Resource id #121, 'INSERT INTO "tb...')
+#2 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "tb...')
+#3 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "tb...')
+#4 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "tb...', Array, false)
+#5 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\xampp\htdocs\pgwl\petalokasiobjek\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#7 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, false)
+#8 C:\xampp\htdocs\pgwl\petalokasiobjek\system\BaseModel.php(658): CodeIgniter\Model->insert(Array, false)
+#9 C:\xampp\htdocs\pgwl\petalokasiobjek\app\Controllers\Objek.php(32): CodeIgniter\BaseModel->save(Array)
+#10 C:\xampp\htdocs\pgwl\petalokasiobjek\system\CodeIgniter.php(904): App\Controllers\Objek->simpantambahdata()
+#11 C:\xampp\htdocs\pgwl\petalokasiobjek\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Objek))
+#12 C:\xampp\htdocs\pgwl\petalokasiobjek\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\pgwl\petalokasiobjek\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+CRITICAL - 2022-09-28 22:04:56 --> pg_query(): Query failed: ERROR:  null value in column &quot;foto&quot; violates not-null constraint
+DETAIL:  Failing row contains (2, test, 123, 106.945552825927750, -6.790762250562566, null, 2022-09-28 22:04:56, 2022-09-28 22:04:56, null).
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  null value in column &quot;foto&quot; violates not-null constraint
+DETAIL:  Failing row contains (2, test, 123, 106.945552825927750, -6.790762250562566, null, 2022-09-28 22:04:56, 2022-09-28 22:04:56, null).', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140, [...])
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'INSERT INTO "tbl_objek" ("nama", "deskripsi", "longitude", "latitude", "created_at", "updated_at") VALUES (\'test\', \'123\', \'106.94555282592775\', \'-6.790762250562566\', \'2022-09-28 22:04:56\', \'2022-09-28 22:04:56\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "tbl_objek" ("nama", "deskripsi", "longitude", "latitude", "created_at", "updated_at") VALUES (\'test\', \'123\', \'106.94555282592775\', \'-6.790762250562566\', \'2022-09-28 22:04:56\', \'2022-09-28 22:04:56\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "tbl_objek" ("nama", "deskripsi", "longitude", "latitude", "created_at", "updated_at") VALUES (\'test\', \'123\', \'106.94555282592775\', \'-6.790762250562566\', \'2022-09-28 22:04:56\', \'2022-09-28 22:04:56\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "tbl_objek" ("nama", "deskripsi", "longitude", "latitude", "created_at", "updated_at") VALUES (:nama:, :deskripsi:, :longitude:, :latitude:, :created_at:, :updated_at:)', [...], false)
+ 6 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], false)
+ 9 SYSTEMPATH\BaseModel.php(658): CodeIgniter\Model->insert([...], false)
+10 APPPATH\Controllers\Objek.php(32): CodeIgniter\BaseModel->save([...])
+11 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Objek->simpantambahdata()
+12 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Objek))
+13 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-09-28 22:05:19 --> ErrorException: pg_query(): Query failed: ERROR:  null value in column &quot;foto&quot; violates not-null constraint
+DETAIL:  Failing row contains (3, test, 123, 107.047519683837900, -6.738258606353293, null, 2022-09-28 22:05:19, 2022-09-28 22:05:19, null). in C:\xampp\htdocs\pgwl\petalokasiobjek\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 140, Array)
+#1 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Database\Postgre\Connection.php(140): pg_query(Resource id #121, 'INSERT INTO "tb...')
+#2 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "tb...')
+#3 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "tb...')
+#4 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "tb...', Array, false)
+#5 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\xampp\htdocs\pgwl\petalokasiobjek\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#7 C:\xampp\htdocs\pgwl\petalokasiobjek\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, false)
+#8 C:\xampp\htdocs\pgwl\petalokasiobjek\system\BaseModel.php(658): CodeIgniter\Model->insert(Array, false)
+#9 C:\xampp\htdocs\pgwl\petalokasiobjek\app\Controllers\Objek.php(32): CodeIgniter\BaseModel->save(Array)
+#10 C:\xampp\htdocs\pgwl\petalokasiobjek\system\CodeIgniter.php(904): App\Controllers\Objek->simpantambahdata()
+#11 C:\xampp\htdocs\pgwl\petalokasiobjek\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Objek))
+#12 C:\xampp\htdocs\pgwl\petalokasiobjek\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\pgwl\petalokasiobjek\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+CRITICAL - 2022-09-28 22:05:19 --> pg_query(): Query failed: ERROR:  null value in column &quot;foto&quot; violates not-null constraint
+DETAIL:  Failing row contains (3, test, 123, 107.047519683837900, -6.738258606353293, null, 2022-09-28 22:05:19, 2022-09-28 22:05:19, null).
+in SYSTEMPATH\Database\Postgre\Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  null value in column &quot;foto&quot; violates not-null constraint
+DETAIL:  Failing row contains (3, test, 123, 107.047519683837900, -6.738258606353293, null, 2022-09-28 22:05:19, 2022-09-28 22:05:19, null).', 'SYSTEMPATH\\Database\\Postgre\\Connection.php', 140, [...])
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(140): pg_query(resource (pgsql link), 'INSERT INTO "tbl_objek" ("nama", "deskripsi", "longitude", "latitude", "created_at", "updated_at") VALUES (\'test\', \'123\', \'107.0475196838379\', \'-6.738258606353293\', \'2022-09-28 22:05:19\', \'2022-09-28 22:05:19\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "tbl_objek" ("nama", "deskripsi", "longitude", "latitude", "created_at", "updated_at") VALUES (\'test\', \'123\', \'107.0475196838379\', \'-6.738258606353293\', \'2022-09-28 22:05:19\', \'2022-09-28 22:05:19\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "tbl_objek" ("nama", "deskripsi", "longitude", "latitude", "created_at", "updated_at") VALUES (\'test\', \'123\', \'107.0475196838379\', \'-6.738258606353293\', \'2022-09-28 22:05:19\', \'2022-09-28 22:05:19\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "tbl_objek" ("nama", "deskripsi", "longitude", "latitude", "created_at", "updated_at") VALUES (:nama:, :deskripsi:, :longitude:, :latitude:, :created_at:, :updated_at:)', [...], false)
+ 6 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], false)
+ 9 SYSTEMPATH\BaseModel.php(658): CodeIgniter\Model->insert([...], false)
+10 APPPATH\Controllers\Objek.php(32): CodeIgniter\BaseModel->save([...])
+11 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Objek->simpantambahdata()
+12 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Objek))
+13 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
