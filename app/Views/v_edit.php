@@ -26,42 +26,42 @@
             </div>
 
             <div class="card-body">
-                <form action="<?= base_url('objek/simpaneditdata/' . $objek['id']) ?>" method="POST" enctype="multipart/form-data">
+                <form action="<?= base_url('jenis/simpaneditdata/' . $jenis['id']) ?>" method="POST" enctype="multipart/form-data">
                     <?= csrf_field(); ?>
                     <div class="mb-3">
-                        <label for="input_nama" class="form-label">Nama</label>
-                        <input type="text" class="form-control text-primary" id="input_nama" name="input_nama" placeholder="Isikan nama objek" value="<?= $objek['nama']; ?>">
+                        <label for="input_jenis" class="form-label">Jenis</label>
+                        <input type="text" class="form-control text-primary" id="input_jenis" name="input_jenis" placeholder="Isikan jenis mangrove" value="<?= $jenis['jenis']; ?>">
                     </div>
                     <div class="mb-3">
                         <label for="input_deskripsi" class="form-label">Deskripsi</label>
-                        <textarea class="form-control text-primary" id="input_deskripsi" name="input_deskripsi" placeholder="Isikan deskripsi objek" rows="3"><?= $objek['deskripsi']; ?>
+                        <textarea class="form-control text-primary" id="input_deskripsi" name="input_deskripsi" placeholder="Isikan deskripsi jenis mangrove" rows="3"><?= $jenis['deskripsi']; ?>
                         </textarea>
                     </div>
                     <div class="mb-3">
                         <label for="input_longitude" class="form-label">Longitude</label>
-                        <input type="text" class="form-control text-primary" id="input_longitude" name="input_longitude" placeholder="Isikan longitude" value="<?= $objek['longitude']; ?>">
+                        <input type="text" class="form-control text-primary" id="input_longitude" name="input_longitude" placeholder="Isikan longitude" value="<?= $jenis['longitude']; ?>">
                     </div>
                     <div class="mb-3">
                         <label for="input_latitude" class="form-label">Latitude</label>
-                        <input type="text" class="form-control text-primary" id="input_latitude" name="input_latitude" placeholder="Isikan latitude" value="<?= $objek['latitude']; ?>">
+                        <input type="text" class="form-control text-primary" id="input_latitude" name="input_latitude" placeholder="Isikan latitude" value="<?= $jenis['latitude']; ?>">
                     </div>
 
                     <div id="map"></div>
 
                     <div class="my-3 row">
                         <div class="col-3 text-center">
-                            <img src="<?= base_url('upload/foto/' . $objek['foto']) ?>" alt="Tidak Ada Foto" width="250px">
+                            <img src="<?= base_url('upload/foto/' . $jenis['foto']) ?>" alt="Tidak Ada Foto" width="250px">
                         </div>
                         <div class="col-9">
                             <label for="input_foto" class="form-label">Foto</label>
-                            <input type="file" class="form-control text-primary" id="input_foto" name="input_foto" value="<?= $objek['foto']; ?>">
-                            <input type="hidden" name="input_foto_lama" value="<?= $objek['foto']; ?>">
+                            <input type="file" class="form-control text-primary" id="input_foto" name="input_foto" value="<?= $jenis['foto']; ?>">
+                            <input type="hidden" name="input_foto_lama" value="<?= $jenis['foto']; ?>">
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col mb-3 d-flex justify-content-start">
-                            <a type="button" href="<?= base_url('objek/table'); ?>" class="btn btn-secondary">Batal</a>
+                            <a type="button" href="<?= base_url('jenis/table'); ?>" class="btn btn-secondary">Batal</a>
                         </div>
                         <div class="col mb-3 d-flex justify-content-end">
                             <button type="submit" class="btn btn-primary ms-auto">Simpan</button>
@@ -77,7 +77,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.8.0/leaflet.min.js" integrity="sha512-TL+GX2RsOUlTndpkgHVnSQ9r6zldqHzfyECrdabkpucdFroZ3/HAhMmP2WYaPjsJCoot+0McmdPOLjmmicG9qg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script>
-        var center = [<?= $objek['latitude']; ?>, <?= $objek['longitude']; ?>];
+        var center = [<?= $jenis['latitude']; ?>, <?= $jenis['longitude']; ?>];
 
         var map = L.map('map').setView(center, 13);
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {

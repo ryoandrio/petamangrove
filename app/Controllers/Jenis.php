@@ -2,18 +2,18 @@
 
 namespace App\Controllers;
 
-use App\Models\TblObjekModel;
+use App\Models\TblJenisModel;
 use App\Controllers\BaseController;
 use Psr\Log\NullLogger;
 
-class Objek extends BaseController
+class Jenis extends BaseController
 {
 
-    protected $TblObjekModel;
+    protected $TblJenisModel;
 
     public function __construct()
     {
-        $this->TblObjekModel = new TblObjekModel();
+        $this->TblJenisModel = new TblJenisModel();
         $this->data['validation'] = \Config\Services::validation();
     }
 
@@ -27,24 +27,24 @@ class Objek extends BaseController
     {
         //Validation
         if (!$this->validate([
-            'input_nama' => [
+            'input_jenis' => [
                 'rules' => 'required',
                 'errors' => [
-                    'required' => 'Kolom nama objek harus diisi'
+                    'required' => 'Kolom jenis jenis harus diisi'
                 ]
             ],
             'input_longitude' => [
                 'rules' => 'required|numeric',
                 'errors' => [
-                    'required' => 'Kolom longitude objek harus diisi',
-                    'numeric' => 'Kolom longitude objek harus berupa angka'
+                    'required' => 'Kolom longitude jenis harus diisi',
+                    'numeric' => 'Kolom longitude jenis harus berupa angka'
                 ]
             ],
             'input_latitude' => [
                 'rules' => 'required|numeric',
                 'errors' => [
-                    'required' => 'Kolom longitude objek harus diisi',
-                    'numeric' => 'Kolom longitude objek harus berupa angka'
+                    'required' => 'Kolom longitude jenis harus diisi',
+                    'numeric' => 'Kolom longitude jenis harus berupa angka'
                 ]
             ],
             'input_foto' => [
@@ -55,7 +55,7 @@ class Objek extends BaseController
                 ]
             ]
         ])) {
-            return redirect()->to('objek')->with("message", 'Gagal menambahkan data lokasi objek.')->withInput();
+            return redirect()->to('jenis')->with("message", 'Gagal menambahkan data lokasi jenis.')->withInput();
         }
 
         //Upload Foto
@@ -68,23 +68,23 @@ class Objek extends BaseController
             if (!is_dir($foto_dir)) {
                 mkdir($foto_dir, 0777, true);
             }
-            $nama_foto = 'foto_' . preg_replace('/\s+/', '', $_POST['input_nama'] . '.' . $file_foto->getExtension());
+            $nama_foto = 'foto_' . preg_replace('/\s+/', '', $_POST['input_jenis'] . '.' . $file_foto->getExtension());
 
             $file_foto->move($foto_dir, $nama_foto);
         }
 
 
         $data = [
-            'nama' => $_POST['input_nama'],
+            'jenis' => $_POST['input_jenis'],
             'deskripsi' => $_POST['input_deskripsi'],
             'longitude' => $_POST['input_longitude'],
             'latitude' => $_POST['input_latitude'],
             'foto' => $nama_foto
         ];
 
-        $this->TblObjekModel->save($data);
+        $this->TblJenisModel->save($data);
 
-        return redirect()->to('objek/table')->with('message', 'Data berhasil ditambahkan');
+        return redirect()->to('jenis/table')->with('message', 'Data berhasil ditambahkan');
     }
 
     public function view()
@@ -95,21 +95,21 @@ class Objek extends BaseController
     public function table()
     {
 
-        $data['objek'] = $this->TblObjekModel->findAll();
+        $data['jenis'] = $this->TblJenisModel->findAll();
 
         return view('v_table', $data);
     }
 
     public function hapus($id)
     {
-        $this->TblObjekModel->delete($id);
+        $this->TblJenisModel->delete($id);
 
-        return redirect()->to('objek/table')->with('message', 'Data berhasil dihapus');
+        return redirect()->to('jenis/table')->with('message', 'Data berhasil dihapus');
     }
 
     public function edit($id)
     {
-        $data['objek'] = $this->TblObjekModel->find($id);
+        $data['jenis'] = $this->TblJenisModel->find($id);
 
         return view('v_edit', $data);
     }
@@ -120,24 +120,24 @@ class Objek extends BaseController
 
         //Validation
         if (!$this->validate([
-            'input_nama' => [
+            'input_jenis' => [
                 'rules' => 'required',
                 'errors' => [
-                    'required' => 'Kolom nama objek harus diisi'
+                    'required' => 'Kolom jenis jenis harus diisi'
                 ]
             ],
             'input_longitude' => [
                 'rules' => ['required', 'numeric'],
                 'errors' => [
-                    'required' => 'Kolom longitude objek harus diisi',
-                    'numeric' => 'Kolom longitude objek harus berupa angka'
+                    'required' => 'Kolom longitude jenis harus diisi',
+                    'numeric' => 'Kolom longitude jenis harus berupa angka'
                 ]
             ],
             'input_latitude' => [
                 'rules' => ['required', 'numeric'],
                 'errors' => [
-                    'required' => 'Kolom longitude objek harus diisi',
-                    'numeric' => 'Kolom longitude objek harus berupa angka'
+                    'required' => 'Kolom longitude jenis harus diisi',
+                    'numeric' => 'Kolom longitude jenis harus berupa angka'
                 ]
             ],
             'input_foto' => [
@@ -148,7 +148,7 @@ class Objek extends BaseController
                 ]
             ]
         ])) {
-            return redirect()->to('objek')->with("message", 'Gagal menambahkan data lokasi objek.')->withInput();
+            return redirect()->to('jenis')->with("message", 'Gagal menambahkan data lokasi jenis.')->withInput();
         }
 
         //Upload Foto
@@ -176,15 +176,15 @@ class Objek extends BaseController
 
         $data = [
             'id' => $id,
-            'nama' => $_POST['input_nama'],
+            'jenis' => $_POST['input_jenis'],
             'deskripsi' => $_POST['input_deskripsi'],
             'longitude' => $_POST['input_longitude'],
             'latitude' => $_POST['input_latitude'],
             'foto' => $nama_foto
         ];
 
-        $this->TblObjekModel->save($data);
+        $this->TblJenisModel->save($data);
 
-        return redirect()->to('objek/table')->with('message', 'Data berhasil diubah');
+        return redirect()->to('jenis/table')->with('message', 'Data berhasil diubah');
     }
 }

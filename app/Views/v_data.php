@@ -47,11 +47,11 @@
 
                     <?php if (auth()->loggedIn()) : ?>
                         <li class="nav-item">
-                            <a class="nav-link" href="<?= base_url('objek'); ?>">
+                            <a class="nav-link" href="<?= base_url('jenis'); ?>">
                                 <i class="fas fa-plus-circle mx-1"></i>Tambah Data</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="<?= base_url('objek/table'); ?>">
+                            <a class="nav-link" href="<?= base_url('jenis/table'); ?>">
                                 <i class="fas fa-table mx-1"></i>Tabel Data</a>
                         </li>
                     <?php endif; ?>
@@ -95,8 +95,8 @@
 
     <script>
         /* Set Up Map */
-        var center = [-6.7336086, 107.0389104];
-        var map = L.map('map').setView(center, 10);
+        var center = [-7.695361621474846, 108.89622628394982];
+        var map = L.map('map').setView(center, 12);
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
             attribution: '© OpenStreetMap'

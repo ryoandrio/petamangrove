@@ -4,7 +4,7 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class TblObjekModel extends Model
+class TblJenisModel extends Model
 {
     protected $DBGroup          = 'default';
     protected $table            = 'tbl_jenis';

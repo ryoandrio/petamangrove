@@ -28,7 +28,7 @@
         <div class="container-fluid">
             <a class="navbar-brand " href="#">
                 <i class="fas fa-map-marked-alt"></i>
-                Peta Lokasi Objek</a>
+                WebGIS Kawasan Mangrove Segara Anakan</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -41,7 +41,7 @@
                                 <i class="fas fa-map-marked-alt mx-1"></i></i>Peta</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="<?= base_url('objek/table'); ?>">
+                            <a class="nav-link" href="<?= base_url('jenis/table'); ?>">
                                 <i class="fas fa-table mx-1"></i>Tabel Data</a>
                         </li>
                     <?php endif; ?>
@@ -63,20 +63,20 @@
             </div>
 
             <div class="card-body">
-                <form action="<?= base_url('objek/simpantambahdata') ?>" method="POST" enctype="multipart/form-data">
+                <form action="<?= base_url('jenis/simpantambahdata') ?>" method="POST" enctype="multipart/form-data">
                     <?= csrf_field(); ?>
 
                     <div class="mb-3">
-                        <label for="input_nama" class="form-label">Nama</label>
-                        <input type="text" class="form-control <?= ($validation->hasError('input_nama')) ? 'is-invalid' : '' ?>" id=" input_nama" name="input_nama" placeholder="Isikan nama objek" value="<?= set_value('input_nama'); ?>">
+                        <label for="input_jenis" class="form-label">Jenis</label>
+                        <input type="text" class="form-control <?= ($validation->hasError('input_jenis')) ? 'is-invalid' : '' ?>" id=" input_jenis" name="input_jenis" placeholder="Isikan jenis mangrove" value="<?= set_value('input_jenis'); ?>">
                         <div class="invalid-feedback">
-                            <?= $validation->getError('input_nama'); ?>
+                            <?= $validation->getError('input_jenis'); ?>
                         </div>
                     </div>
 
                     <div class="mb-3">
                         <label for="input_deskripsi" class="form-label">Deskripsi</label>
-                        <textarea class="form-control" id="input_deskripsi" name="input_deskripsi" placeholder="Isikan deskripsi objek" rows="3"></textarea>
+                        <textarea class="form-control" id="input_deskripsi" name="input_deskripsi" placeholder="Isikan deskripsi dari jenis mangrove" rows="3"></textarea>
                     </div>
 
                     <div class="mb-3">
@@ -121,7 +121,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.8.0/leaflet.min.js" integrity="sha512-TL+GX2RsOUlTndpkgHVnSQ9r6zldqHzfyECrdabkpucdFroZ3/HAhMmP2WYaPjsJCoot+0McmdPOLjmmicG9qg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script>
-        var center = [-6.7336086, 107.0389104];
+        var center = [-7.695361621474846, 108.89622628394982];
 
         var map = L.map('map').setView(center, 13);
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {

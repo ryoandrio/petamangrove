@@ -4,7 +4,7 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class TbldatapolygonModel extends Model
+class TblMangroveModel extends Model
 {
     protected $DBGroup          = 'default';
     protected $table            = 'tbl_data_polygon';

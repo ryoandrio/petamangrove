@@ -29,7 +29,7 @@
         <div class="container-fluid">
             <a class="navbar-brand " href="#">
                 <i class="fas fa-map-marked-alt"></i>
-                Peta Lokasi Objek</a>
+                WebGIS Kawasan Mangrove Segara Anakan</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -42,7 +42,7 @@
                                 <i class="fas fa-map-marked-alt mx-1"></i></i>Peta</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="<?= base_url('objek'); ?>">
+                            <a class="nav-link" href="<?= base_url('jenis'); ?>">
                                 <i class="fas fa-plus-circle mx-1"></i>Tambah Data</a>
                         </li>
                     <?php endif; ?>
@@ -76,11 +76,11 @@
                 <?php endif ?>
 
                 <div class="table-responsive">
-                    <table id="table_objek" class="table table-striped table-bordered">
+                    <table id="table_jenis" class="table table-striped table-bordered">
                         <thead>
                             <tr>
                                 <th>No</th>
-                                <th>Nama</th>
+                                <th>Jenis</th>
                                 <th>Deskripsi</th>
                                 <th>Lokasi</th>
                                 <th>Foto</th>
@@ -93,10 +93,10 @@
                         <tbody>
                             <?php
                             $i = 1;
-                            foreach ($objek as $obj) : ?>
+                            foreach ($jenis as $obj) : ?>
                                 <tr>
                                     <td><?= $i++; ?></td>
-                                    <td><?= $obj['nama']; ?></td>
+                                    <td><?= $obj['jenis']; ?></td>
                                     <td><?= $obj['deskripsi']; ?></td>
                                     <td>
                                         <a href="<?= 'https://www.google.com/maps/dir/?api=1&destination=' .
@@ -111,10 +111,10 @@
                                     <td><?= $obj['updated_at']; ?></td>
                                     <td class="">
                                         <div class="d-flex justify-content-center">
-                                            <a href="<?= base_url('objek/edit/' . $obj['id']) ?>" class="btn btn-warning btn-sm mx-2">
+                                            <a href="<?= base_url('jenis/edit/' . $obj['id']) ?>" class="btn btn-warning btn-sm mx-2">
                                                 <i class="fas fa-edit"></i>
                                             </a>
-                                            <a href="<?= base_url('objek/hapus/' . $obj['id']) ?>" type="button" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin untuk menghapus data <?= $obj['nama'] ?> ?')">
+                                            <a href="<?= base_url('jenis/hapus/' . $obj['id']) ?>" type="button" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin untuk menghapus data <?= $obj['jenis'] ?> ?')">
                                                 <i class="fas fa-trash"></i>
                                             </a>
                                         </div>
@@ -130,7 +130,7 @@
 
     <script>
         $(document).ready(function() {
-            $('#table_objek').DataTable();
+            $('#table_jenis').DataTable();
         });
     </script>
 </body>
