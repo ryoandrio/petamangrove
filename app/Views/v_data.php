@@ -4,11 +4,16 @@
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Peta Lokasi Objek</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" content-type="text/css" />
+    <title>WebGIS Mangrove</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.1/dist/leaflet.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="dist/leaflet.awesome-markers.css" type="text/css" /> -->
+    <style>
+        <?php include('dist/leaflet.awesome-markers.css') ?>
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <style>
         html,
@@ -33,6 +38,9 @@
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script>
+        <?php include('dist/leaflet.awesome-markers.js') ?>
+    </script>
 
     <nav class="navbar navbar-expand-lg bg-light fixed-top">
         <div class="container-fluid">
@@ -104,15 +112,25 @@
 
         /* GeoJSON */
         var objek = L.geoJson(null, {
+            pointToLayer: function(feature, latlng) {
+                return L.marker(latlng, {
+                    icon: L.AwesomeMarkers.icon({
+                        icon: "pagelines",
+                        markerColor: "green",
+                        stylePrefix: "fab",
+                        prefix: "fa",
+                    })
+                });
+            },
             onEachFeature: function(feature, layer) {
-                var popupContent = "<h4>" + feature.properties.nama + "</h4><hr>" +
-                    "<br>" + feature.properties.deskripsi;
+                var popupContent = "<h4>" + feature.properties.jenis + "</h4><hr>" +
+                    "<br>" + feature.properties.keterangan;
                 layer.on({
                     click: function(e) {
                         objek.bindPopup(popupContent);
                     },
                     mouseover: function(e) {
-                        objek.bindTooltip(feature.properties.nama);
+                        objek.bindTooltip(feature.properties.jenis);
                     },
                 });
             },
