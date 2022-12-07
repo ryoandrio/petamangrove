@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Tabel</title>
+    <title>Tabel Data Jenis Mangrove</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css" />
@@ -62,7 +62,7 @@
             <div class="card-header">
                 <h3 class="card-title text-center">
                     <i class="fas fa-table"></i>
-                    Tabel Data Objek
+                    Tabel Data Jenis Mangrove
                 </h3>
             </div>
             <div class="card-body">

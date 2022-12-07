@@ -48,10 +48,10 @@ class Jenis extends BaseController
                 ]
             ],
             'input_foto' => [
-                'rules' => 'mime_in[input_foto,image/jpg,image/jpeg,image/png]|max_size[input_foto,1024]',
+                'rules' => 'mime_in[input_foto,image/jpg,image/jpeg,image/png]|max_size[input_foto,5024]',
                 'errors' => [
                     'mime_in' => 'File yang diunggah harus berupa gambar JPG/JPEG/PNG',
-                    'max_size' => 'Ukuran foto maksimal 1 MB'
+                    'max_size' => 'Ukuran foto maksimal 5 MB'
                 ]
             ]
         ])) {
@@ -141,10 +141,10 @@ class Jenis extends BaseController
                 ]
             ],
             'input_foto' => [
-                'rules' => 'mime_in[input_foto,image/jpg,image/jpeg,image/png]|max_size[input_foto,1024]',
+                'rules' => 'mime_in[input_foto,image/jpg,image/jpeg,image/png]|max_size[input_foto,5024]',
                 'errors' => [
                     'mime_in' => 'File yang diunggah harus berupa gambar',
-                    'max_size' => 'Ukuran foto maksimal 1 MB'
+                    'max_size' => 'Ukuran foto maksimal 5 MB'
                 ]
             ]
         ])) {

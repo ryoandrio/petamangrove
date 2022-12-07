@@ -4,25 +4,66 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Form Edit Data</title>
+    <title>Form Edit Data Jenis Mangrove</title>
+
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.8.0/leaflet.min.css" integrity="sha512-oIQ0EBio8LJupRpgmDsIsvm0Fsr6c3XNHLB7at5xb+Cf6eQuCX9xuX8XXGRIcokNgdqL1ms7nqbQ6ryXMGxXpg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <style>
         #map {
             height: 500px;
             width: 100%;
         }
+
+        .container {
+            margin-top: 70px;
+        }
     </style>
 </head>
 
 <body>
+
+    <nav class="navbar navbar-expand-lg bg-light fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand " href="#">
+                <i class="fas fa-map-marked-alt"></i>
+                WebGIS Kawasan Mangrove Segara Anakan</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+
+                    <?php if (auth()->loggedIn()) : ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?= base_url(); ?>">
+                                <i class="fas fa-map-marked-alt mx-1"></i></i>Peta</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?= base_url('jenis/table'); ?>">
+                                <i class="fas fa-table mx-1"></i>Tabel Data</a>
+                        </li>
+                    <?php endif; ?>
+
+                    <li class="nav-item">
+                        <a class="nav-link active <?= auth()->loggedIn() ? 'text-danger' : '' ?>" href="<?= auth()->loggedIn() ? base_url('logout') : base_url('login') ?>">
+                            <i class="fas fa-sign-in-alt "></i>
+                            <?= auth()->loggedIn() ? 'Keluar' : 'Masuk' ?></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
     <div class="container">
         <div class="card my-3">
             <div class="card-header">
-                <h4>EDIT DATA</h4>
+                <h3 class="card-title text-center">
+                    <i class="fas fa-edit"></i>
+                    Edit Data
+                </h3>
             </div>
 
             <div class="card-body">
